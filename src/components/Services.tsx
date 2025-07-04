@@ -561,19 +561,11 @@ export default function Services() {
           >
             <motion.div
               className="absolute inset-0 bg-primary"
-              // animate={{
-              //   x: ["-100%", "100%"],
-              // }}
-              // transition={{
-              //   duration: 1.5,
-              //   repeat: Infinity,
-              //   ease: "easeInOut",
-              // }}
             />
           </motion.div>
 
           <motion.p
-            className="text-xl text-gray-400 max-w-2xl mx-auto"
+            className=" text-base md:text-xl text-gray-400 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

@@ -19,7 +19,7 @@ export default function About() {
             Poznej svého trenéra
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="md:text-xl text-gray-400 max-w-2xl mx-auto">
             Kdo jsem a jak ti mohu pomoci dosáhnout tvých fitness cílů
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function About() {
               </div>
 
               {/* Stats card */}
-              <div className="absolute -bottom-6 -right-6 bg-zinc-900 p-4 shadow-xl z-20 transform hover:translate-y-1 transition-transform duration-300 border-t-2 border-primary">
+              <div className=" bg-zinc-900 p-4 shadow-xl z-20 transform hover:translate-y-1 transition-transform duration-300 border-t-2 border-primary">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-xl font-bold">
                     V
@@ -63,56 +63,8 @@ export default function About() {
               </div>
 
               {/* Experience badge */}
-              <div className="absolute -top-6 -left-6 bg-zinc-900 py-2 px-4 shadow-lg border-t-2 border-primary transform hover:translate-y-1 hover:translate-x-1 transition-all duration-300 z-10">
+              <div className="absolute hidden md:block -top-6 -left-6 bg-zinc-900 py-2 px-4 shadow-lg border-t-2 border-primary transform hover:translate-y-1 hover:translate-x-1 transition-all duration-300 z-10">
                 <p className="text-primary font-bold">5+ let zkušeností</p>
-              </div>
-            </div>
-
-            {/* Certification badges */}
-            <div className="mt-12 grid grid-cols-2 gap-4">
-              <div className="bg-zinc-900 p-4 shadow-md border-l-2 border-primary flex items-center gap-3 hover:translate-x-1 transition-all duration-300">
-                <div className="p-2 bg-primary/20">
-                  <svg
-                    className="w-5 h-5 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-semibold text-sm text-white">
-                    Certifikovaný
-                  </p>
-                  <p className="text-xs text-gray-400">Osobní trenér</p>
-                </div>
-              </div>
-              <div className="bg-zinc-900 p-4 shadow-md border-l-2 border-accent flex items-center gap-3 hover:translate-x-1 transition-all duration-300">
-                <div className="p-2 bg-accent/20">
-                  <svg
-                    className="w-5 h-5 text-accent"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-semibold text-sm text-white">Odborník</p>
-                  <p className="text-xs text-gray-400">Výživa & Suplement.</p>
-                </div>
               </div>
             </div>
           </div>

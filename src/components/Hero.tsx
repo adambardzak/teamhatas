@@ -89,8 +89,9 @@ export default function Hero() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                className="w-full md:w-fit"
               >
-                <Link href="#sluzby" className="btn btn-outline">
+                <Link href="#sluzby" className="btn btn-outline w-full">
                   Prozkoumat služby
                 </Link>
               </motion.div>
@@ -136,7 +137,7 @@ export default function Hero() {
 
           {/* Hero image with geometric decorations */}
           <motion.div
-            className="relative mx-auto w-full"
+            className="hidden md:block relative mx-auto w-full"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{

@@ -73,7 +73,7 @@ export default function Header() {
                 <span className="text-2xl font-bold tracking-wide text-white">
                   TEAM
                 </span>
-                <span className="text-4xl font-bold tracking-wider text-primary transform -mt-1 transition-transform duration-300 rotate-3 -translate-y-1 group-hover:-rotate-6 group-hover:scale-110">
+                <span className="text-4xl font-bold tracking-wider text-primary transform -mt-1 transition-transform duration-300 -rotate-3 -translate-y-1 group-hover:-rotate-6 group-hover:scale-110">
                   HATAS
                 </span>
               </div>
@@ -189,7 +189,7 @@ export default function Header() {
       </nav>
       
 
-      
+
       <AnimatePresence mode="wait">
         {isMobileMenuOpen && (
           <motion.div

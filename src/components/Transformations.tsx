@@ -113,7 +113,7 @@ const TransformationCard: React.FC<TransformationCardProps> = ({
 
           {/* Stats */}
           {stats && (
-            <div className="grid grid-cols-3 gap-4 mb-6">
+            <div className="grid grid-cols-2 gap-4 mb-6">
               {stats.weightLoss && (
                 <div className="text-center p-3 bg-zinc-900 border-l-2 border-primary relative">
                   <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
@@ -250,7 +250,7 @@ export default function Transformations() {
             Skutečné proměny
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-gray-400 max-w-2xl mx-auto">
             Podívejte se na příběhy klientů, jejichž disciplína a odhodlání
             společně s mým vedením přineslo výjimečné výsledky
           </p>

@@ -59,7 +59,7 @@ const StatCounter: React.FC<StatProps> = ({
   return (
     <motion.div
       id={`stat-${label.replace(/\s+/g, "-").toLowerCase()}`}
-      className="relative p-8 bg-zinc-800/70 rounded-none border-t-4 border-primary shadow-lg transition-transform duration-300 hover:-translate-y-2 group"
+      className="relative p-4 md:p-8 bg-zinc-800/70 rounded-none border-t-4 border-primary shadow-lg transition-transform duration-300 hover:-translate-y-2 group"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -86,7 +86,7 @@ const StatCounter: React.FC<StatProps> = ({
         </motion.div>
       )}
 
-      <div className="text-4xl md:text-5xl font-extrabold text-white mb-3 flex items-end relative">
+      <div className="text-3xl md:text-5xl font-extrabold text-white mb-3 flex items-end relative">
         <motion.span
           className="text-primary mr-1"
           initial={{ opacity: 0 }}
@@ -104,13 +104,6 @@ const StatCounter: React.FC<StatProps> = ({
           transition={{ duration: 0.3, delay: 0.5 }}
         >
           {count}
-          {/* <motion.span 
-            className="absolute -bottom-1 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 0.5 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 1 }}
-          ></motion.span> */}
         </motion.span>
         <motion.span
           className="text-accent ml-1"
@@ -183,7 +176,7 @@ export default function Statistics() {
           transition={{ duration: 0.8 }}
         >
           <motion.h5
-            className="text-primary mb-3 text-sm font-semibold uppercase tracking-wider"
+            className="text-primary mb-3 text-sm md:text-base font-semibold uppercase tracking-wider"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -198,7 +191,8 @@ export default function Statistics() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Výsledky, které <span className="text-primary">mluví za vše</span>
+            Výsledky, které <br className="block md:hidden" />
+            <span className="text-primary">mluví za vše</span>
           </motion.h2>
           <motion.div
             className="w-24 h-1 bg-primary mx-auto mb-6"
@@ -208,7 +202,7 @@ export default function Statistics() {
             transition={{ duration: 0.8, delay: 0.3 }}
           ></motion.div>
           <motion.p
-            className="text-xl text-gray-400 max-w-2xl mx-auto"
+            className="text-base md:text-xl text-gray-400 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -218,7 +212,7 @@ export default function Statistics() {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           <StatCounter
             value={500}
             label="Spokojených klientů"

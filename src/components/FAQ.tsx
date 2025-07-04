@@ -137,7 +137,7 @@ export default function FAQ() {
             Často kladené otázky
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="md:text-xl text-gray-400 max-w-2xl mx-auto">
             Všechno, co potřebujete vědět o mém fitness coachingu a jak vám mohu
             pomoci dosáhnout vašich cílů
           </p>

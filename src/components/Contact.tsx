@@ -7,7 +7,6 @@ export default function Contact() {
       id="rezervace"
       className="py-20 relative bg-zinc-900 overflow-hidden"
     >
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h5 className="text-primary mb-3 text-sm font-semibold uppercase tracking-wider">
@@ -17,7 +16,7 @@ export default function Contact() {
             Začněte <span className="text-primary">svou transformaci</span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="md:text-xl text-gray-400 max-w-2xl mx-auto">
             První krok k lepšímu já je jen pár kliknutí daleko. Vyplňte formulář
             a začněme pracovat na vašich cílech.
           </p>
@@ -26,7 +25,7 @@ export default function Contact() {
         <div className="flex flex-col lg:flex-row gap-10">
           {/* How it works section */}
           <div className="w-full lg:w-1/2">
-            <div className="bg-zinc-800/80 backdrop-blur-sm p-8 border-t-4 border-primary">
+            <div className="bg-zinc-800/80 backdrop-blur-sm p-4 md:p-8 border-t-4 border-primary">
               <h3 className="text-2xl font-bold mb-8 text-white flex items-center">
                 <span className="w-10 h-10 inline-flex items-center justify-center bg-primary text-white mr-3 text-sm font-bold">
                   <svg
@@ -47,17 +46,17 @@ export default function Contact() {
                 Jak to funguje
               </h3>
 
-              <div className="space-y-8">
+              <div className=" space-y-6 md:space-y-8">
                 <div className="flex relative">
-                  <div className="w-14 h-14 rounded-none bg-primary flex items-center justify-center text-white font-bold text-xl mr-5 flex-shrink-0 z-10 border border-white/20">
+                  <div className="md:w-14 md:h-14 h-10 w-10 rounded-none bg-primary flex items-center justify-center text-white font-bold text-xl mr-5 flex-shrink-0 z-10 border border-white/20">
                     1
                   </div>
-                  <div className="absolute left-7 top-14 w-0.5 h-24 bg-zinc-700 z-0"></div>
+                  <div className="absolute left-5 md:left-7 top-10 md:top-14 w-0.5 h-24 bg-zinc-700 z-0"></div>
                   <div>
                     <h4 className="font-bold text-xl mb-2 text-white">
                       Vyplňte formulář
                     </h4>
-                    <p className="text-gray-400 leading-relaxed">
+                    <p className="text-gray-400 text-sm md:text-base leading-relaxed">
                       Vyplňte krátký formulář s vašimi základními údaji,
                       aktuální situací a fitness cíli, kterých chcete dosáhnout.
                       Pomůže mi lépe pochopit vaše potřeby a efektivně připravit
@@ -67,15 +66,15 @@ export default function Contact() {
                 </div>
 
                 <div className="flex relative">
-                  <div className="w-14 h-14 rounded-none bg-primary flex items-center justify-center text-white font-bold text-xl mr-5 flex-shrink-0 z-10 border border-white/20">
+                  <div className="md:w-14 md:h-14 h-10 w-10 rounded-none bg-primary flex items-center justify-center text-white font-bold text-xl mr-5 flex-shrink-0 z-10 border border-white/20">
                     2
                   </div>
-                  <div className="absolute left-7 top-14 w-0.5 h-24 bg-zinc-700 z-0"></div>
+                  <div className="absolute left-5 md:left-7 top-10 md:top-14 w-0.5 h-24 bg-zinc-700 z-0"></div>
                   <div>
                     <h4 className="font-bold text-xl mb-2 text-white">
                       Úvodní konzultace
                     </h4>
-                    <p className="text-gray-400 leading-relaxed">
+                    <p className="text-gray-400 text-sm md:text-base leading-relaxed">
                       Na základě vašich údajů proběhne detailní konzultace, kde
                       důkladně probereme vaše cíle, současný stav a sestavíme
                       strategii spolupráce. Odpovím na všechny vaše otázky a
@@ -85,14 +84,14 @@ export default function Contact() {
                 </div>
 
                 <div className="flex">
-                  <div className="w-14 h-14 rounded-none bg-primary flex items-center justify-center text-white font-bold text-xl mr-5 flex-shrink-0 border border-white/20">
+                  <div className="md:w-14 md:h-14 h-10 w-10 rounded-none bg-primary flex items-center justify-center text-white font-bold text-xl mr-5 flex-shrink-0 z-10 border border-white/20">
                     3
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-2 text-white">
                       Začneme transformaci
                     </h4>
-                    <p className="text-gray-400 leading-relaxed">
+                    <p className="text-gray-400 text-sm md:text-base leading-relaxed">
                       Připravím pro vás personalizovaný tréninkový a stravovací
                       plán. Společně budeme pracovat na vašich cílech s
                       pravidelnými kontrolami a úpravami plánu podle vašeho
