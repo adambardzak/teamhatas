@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Montserrat } from "next/font/google";
-import { Bebas_Neue } from "next/font/google";
+import { Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import CookieConsent from "../components/CookieConsent";
 
@@ -21,10 +21,10 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const bebasNeue = Bebas_Neue({
+const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  variable: "--font-bebas-neue",
-  weight: "400",
+  variable: "--font-barlow-condensed",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="cs" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${bebasNeue.variable} antialiased text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${barlowCondensed.variable} antialiased text-white`}
       >
         {children}
         <CookieConsent />

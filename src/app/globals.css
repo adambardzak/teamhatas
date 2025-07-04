@@ -54,7 +54,7 @@ body.no-scroll {
 
 /* Apply heading font styles globally */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-bebas-neue);
+  font-family: var(--font-barlow-condensed);
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -271,7 +271,7 @@ body {
 
   .section-heading {
     @apply text-3xl md:text-5xl mb-6 text-white tracking-wider;
-    font-family: var(--font-bebas-neue);
+    font-family: var(--font-barlow-condensed);
     line-height: 1;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     position: relative;

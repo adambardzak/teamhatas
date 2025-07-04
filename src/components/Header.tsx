@@ -69,11 +69,11 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="relative z-10 group">
-              <div className="flex flex-col leading-none font-['Bebas_Neue',sans-serif] group">
-                <span className="text-2xl font-bold tracking-wide text-white">
+              <div className="flex flex-col leading-tight font-['Barlow_condensed',sans-serif] group font-extrabold">
+                <span className="text-2xl font-extrabold tracking-tight text-white">
                   TEAM
                 </span>
-                <span className="text-4xl font-bold tracking-wider text-primary transform -mt-1 transition-transform duration-300 -rotate-3 -translate-y-1 group-hover:-rotate-6 group-hover:scale-110">
+                <span className="text-4xl font-extrabold tracking-tight text-primary transform -mt-1 transition-transform duration-300 -rotate-3 -translate-y-1 group-hover:-rotate-6 group-hover:scale-110">
                   HATAS
                 </span>
               </div>
