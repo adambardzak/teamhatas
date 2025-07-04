@@ -31,6 +31,20 @@ export const metadata: Metadata = {
   title: "Víta Hatas - Osobní trenér & Online Coach",
   description:
     "Profesionální fitness trenér nabízející online coaching, osobní tréninky, jídelníčky a tréninkové plány na míru.",
+  openGraph: {
+    title: "Víta Hatas - Osobní trenér & Online Coach",
+    description: "Profesionální fitness trenér nabízející online coaching, osobní tréninky, jídelníčky a tréninkové plány na míru.",
+    images: [
+      {
+        url: "/og-image.avif",
+        width: 1200,
+        height: 630,
+        alt: "Víta Hatas - Online Coaching & Osobní Tréninky",
+      }
+    ],
+    locale: "cs_CZ",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
