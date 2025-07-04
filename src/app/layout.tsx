@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="cs" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${bebasNeue.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${bebasNeue.variable} antialiased text-white`}
       >
         {children}
         <CookieConsent />

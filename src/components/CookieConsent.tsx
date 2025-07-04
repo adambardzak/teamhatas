@@ -120,9 +120,12 @@ const CookieConsent: React.FC = () => {
 
   return (
     <>
-      {/* Kompaktní banner v pravém dolním rohu */}
-      <div className={`fixed z-50 ${!showDetails ? 'bottom-8 right-8 max-w-md' : 'bottom-0 right-0 md:bottom-8 md:right-8 md:max-w-xl'}`}>
-        <div className={`backdrop-blur-md bg-zinc-900/95 border border-primary/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)] animate-fade-in-up overflow-hidden ${showDetails ? 'md:w-[550px]' : ''}`}>
+      {/* Cookie banner s responzivním centrováním */}
+      <div className={`fixed z-50 ${!showDetails ? 
+        // Na mobilních zařízeních vystředíme, na větších obrazovkách vpravo dole
+        'bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-md md:translate-x-0 md:left-auto md:right-8' : 
+        'bottom-0 left-0 right-0 md:left-auto md:right-8 md:bottom-8 w-full md:w-auto md:max-w-xl'}`}>
+        <div className={`backdrop-blur-md bg-zinc-900/95 border border-primary/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)] animate-fade-in-up overflow-hidden ${showDetails ? 'md:w-[550px]' : 'w-full'} text-white`}>
           {!showDetails ? (
             // Kompaktní verze banneru
             <div className="p-6">

@@ -59,18 +59,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-@media (prefers-color-scheme: dark) {
-  /* We'll use our manual toggle now instead of media query for dark mode */
-  /* These styles will only apply if user has dark mode preference AND JavaScript is disabled */
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 12, 12, 12;
-    --background-end-rgb: 0, 0, 0;
-    --secondary: #171717;
-    --secondary-light: #262626;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
