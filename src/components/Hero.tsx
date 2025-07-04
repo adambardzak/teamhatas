@@ -20,7 +20,7 @@ export default function Hero() {
             }}
           >
             <motion.h1
-              className="text-5xl md:text-7xl xl:text-8xl font-extrabold mb-6 leading-tight"
+              className="text-5xl md:text-7xl xl:text-8xl font-extrabold mb-6 leading-tight text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
