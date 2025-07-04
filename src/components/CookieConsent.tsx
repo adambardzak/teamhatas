@@ -122,7 +122,7 @@ const CookieConsent: React.FC = () => {
     <>
       {/* Kompaktní banner v pravém dolním rohu */}
       <div className={`fixed z-50 ${!showDetails ? 'bottom-8 right-8 max-w-md' : 'bottom-0 right-0 md:bottom-8 md:right-8 md:max-w-xl'}`}>
-        <div className={`rounded-xl backdrop-blur-md bg-zinc-900/95 border border-primary/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)] animate-fade-in-up overflow-hidden ${showDetails ? 'md:w-[550px]' : ''}`}>
+        <div className={`backdrop-blur-md bg-zinc-900/95 border border-primary/40 shadow-[0_8px_32px_rgba(0,0,0,0.4)] animate-fade-in-up overflow-hidden ${showDetails ? 'md:w-[550px]' : ''}`}>
           {!showDetails ? (
             // Kompaktní verze banneru
             <div className="p-6">
@@ -147,7 +147,7 @@ const CookieConsent: React.FC = () => {
               <div className="flex flex-col gap-2">
                 <button 
                   onClick={acceptAllCookies}
-                  className="w-full py-2.5 px-4 bg-gradient-to-r from-primary to-accent rounded-md text-sm font-medium hover:opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                  className="w-full py-2.5 px-4 bg-primary rounded-none text-sm font-medium hover:opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50"
                 >
                   Přijmout vše
                 </button>
@@ -155,14 +155,14 @@ const CookieConsent: React.FC = () => {
                 <div className="flex gap-2 w-full">
                   <button 
                     onClick={acceptNecessaryCookies}
-                    className="flex-1 py-2.5 px-4 bg-transparent border border-gray-600 hover:border-gray-400 rounded-md text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    className="flex-1 py-2.5 px-4 bg-transparent border border-gray-600 hover:border-gray-400 rounded-none text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
                   >
                     Pouze nezbytné
                   </button>
                   
                   <button 
                     onClick={() => setShowDetails(true)}
-                    className="flex-1 py-2.5 px-4 bg-transparent border border-gray-600 hover:border-gray-400 rounded-md text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    className="flex-1 py-2.5 px-4 bg-transparent border border-gray-600 hover:border-gray-400 rounded-none text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
                   >
                     Přizpůsobit
                   </button>
@@ -188,7 +188,7 @@ const CookieConsent: React.FC = () => {
                 </div>
                 <button 
                   onClick={() => setShowDetails(false)}
-                  className="p-2 rounded-full hover:bg-gray-800 text-gray-400 hover:text-white transition duration-300 focus:outline-none"
+                  className="p-2 hover:bg-gray-800 text-gray-400 hover:text-white transition duration-300 focus:outline-none"
                   aria-label="Zavřít nastavení"
                 >
                   <svg 
@@ -205,10 +205,10 @@ const CookieConsent: React.FC = () => {
               
               <div className="space-y-3 mb-5 max-h-[280px] overflow-y-auto pr-2 custom-scrollbar">
                 {cookieCategories.map((category) => (
-                  <div key={category.id} className="bg-zinc-800/50 rounded-lg p-3 border-l-3 border-primary/80 transition-all hover:bg-zinc-800/70">
+                  <div key={category.id} className="bg-zinc-800/50 p-3 border-l-3 border-primary/80 transition-all hover:bg-zinc-800/70">
                     <div className="flex items-center justify-between mb-1.5">
                       <label htmlFor={`cookie-${category.id}`} className={`font-medium text-sm ${category.required ? 'cursor-default' : 'cursor-pointer'}`}>
-                        {category.title} {category.required && <span className="ml-2 px-1.5 py-0.5 text-xs bg-primary/20 text-primary rounded-full">povinné</span>}
+                        {category.title} {category.required && <span className="ml-2 px-1.5 py-0.5 text-xs bg-primary/20 text-primary">povinné</span>}
                       </label>
                       <div className="relative inline-flex items-center">
                         <input
@@ -219,7 +219,7 @@ const CookieConsent: React.FC = () => {
                           disabled={category.required}
                           className="sr-only peer"
                         />
-                        <div className={`w-9 h-5 bg-gray-700 rounded-full peer peer-focus:ring-2 peer-focus:ring-primary/50 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all ${category.required ? 'opacity-60' : 'peer-checked:bg-primary cursor-pointer'}`}></div>
+                        <div className={`w-9 h-5 bg-gray-700 peer peer-focus:ring-2 peer-focus:ring-primary/50 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:h-4 after:w-4 after:transition-all ${category.required ? 'opacity-60' : 'peer-checked:bg-primary cursor-pointer'}`}></div>
                       </div>
                     </div>
                     <p className="text-xs text-gray-400">{category.description}</p>
@@ -231,14 +231,14 @@ const CookieConsent: React.FC = () => {
                 <div className="flex gap-2 w-full mb-2">
                   <button 
                     onClick={acceptNecessaryCookies}
-                    className="flex-1 py-2 px-3 bg-transparent border border-gray-600 hover:border-gray-400 rounded-md text-xs font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    className="flex-1 py-2 px-3 bg-transparent border border-gray-600 hover:border-gray-400 rounded-none text-xs font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
                   >
                     Pouze nezbytné
                   </button>
                   
                   <button 
                     onClick={acceptAllCookies}
-                    className="flex-1 py-2 px-3 bg-transparent border border-gray-600 hover:border-gray-400 rounded-md text-xs font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    className="flex-1 py-2 px-3 bg-transparent border border-gray-600 hover:border-gray-400 rounded-none text-xs font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
                   >
                     Přijmout vše
                   </button>
@@ -246,7 +246,7 @@ const CookieConsent: React.FC = () => {
                 
                 <button 
                   onClick={saveDetailedPreferences}
-                  className="w-full py-2.5 px-4 bg-gradient-to-r from-primary to-accent rounded-md text-sm font-medium hover:opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                  className="w-full py-2.5 px-4 bg-gradient-to-r from-primary to-accent rounded-none text-sm font-medium hover:opacity-90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50"
                 >
                   Uložit nastavení
                 </button>
@@ -289,12 +289,10 @@ const CookieConsent: React.FC = () => {
         
         .custom-scrollbar::-webkit-scrollbar-track {
           background: rgba(75, 85, 99, 0.1);
-          border-radius: 10px;
         }
         
         .custom-scrollbar::-webkit-scrollbar-thumb {
           background: rgba(75, 85, 99, 0.5);
-          border-radius: 10px;
         }
         
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
